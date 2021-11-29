@@ -1,0 +1,76 @@
+{
+  "name": "search-after-with-pit-fields-body",
+  "operation-type": "composite",
+  "requests": [
+    {
+      "stream": [
+        {
+          "operation-type": "open-point-in-time",
+          "name": "open-pit",
+          "index": "pmc"
+        },
+        {
+          "operation-type": "paginated-search",
+          "name": "paginate",
+          "index": "pmc",
+          "with-point-in-time-from": "open-pit",
+          "pages": 25,
+          "results-per-page": 1000,
+          "body": {
+            "sort": [
+              {"timestamp": "desc"}
+            ],
+            "query": {
+              "match_all": {}
+            },
+            "_source": false,
+            "fields": ["body"]
+          }
+        },
+        {
+          "name": "close-pit",
+          "operation-type": "close-point-in-time",
+          "with-point-in-time-from": "open-pit"
+        }
+      ]
+    }
+  ]
+},
+{
+  "name": "search-after-with-pit-fields-journal",
+  "operation-type": "composite",
+  "requests": [
+    {
+      "stream": [
+        {
+          "operation-type": "open-point-in-time",
+          "name": "open-pit",
+          "index": "pmc"
+        },
+        {
+          "operation-type": "paginated-search",
+          "name": "paginate",
+          "index": "pmc",
+          "with-point-in-time-from": "open-pit",
+          "pages": 25,
+          "results-per-page": 1000,
+          "body": {
+            "sort": [
+              {"timestamp": "desc"}
+            ],
+            "query": {
+              "match_all": {}
+            },
+            "_source": false,
+            "fields": ["journal"]
+          }
+        },
+        {
+          "name": "close-pit",
+          "operation-type": "close-point-in-time",
+          "with-point-in-time-from": "open-pit"
+        }
+      ]
+    }
+  ]
+}
