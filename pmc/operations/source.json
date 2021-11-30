@@ -1,5 +1,5 @@
 {
-  "name": "search-after-with-pit-default",
+  "name": "search-after-with-pit-default-no-compression",
   "operation-type": "composite",
   "requests": [
     {
@@ -16,6 +16,8 @@
           "with-point-in-time-from": "open-pit",
           "pages": 25,
           "results-per-page": 1000,
+          "#COMMENT": "Large responses cause overhead on the client when decompressing the response. Disable to avoid the overhead",
+          "response-compression-enabled": false,
           "body": {
             "sort": [
               {"timestamp": "desc"}
@@ -35,7 +37,7 @@
   ]
 },
 {
-  "name": "search-after-with-pit-source-false",
+  "name": "search-after-with-pit-source-false-no-compression",
   "operation-type": "composite",
   "requests": [
     {
@@ -52,6 +54,8 @@
           "with-point-in-time-from": "open-pit",
           "pages": 25,
           "results-per-page": 1000,
+          "#COMMENT": "Large responses cause overhead on the client when decompressing the response. Disable to avoid the overhead",
+          "response-compression-enabled": false,
           "body": {
             "sort": [
               {"timestamp": "desc"}
@@ -72,7 +76,7 @@
   ]
 },
 {
-  "name": "search-after-with-pit-source-body",
+  "name": "search-after-with-pit-source-body-no-compression",
   "operation-type": "composite",
   "requests": [
     {
@@ -89,6 +93,8 @@
           "with-point-in-time-from": "open-pit",
           "pages": 25,
           "results-per-page": 1000,
+          "#COMMENT": "Large responses cause overhead on the client when decompressing the response. Disable to avoid the overhead",
+          "response-compression-enabled": false,
           "body": {
             "sort": [
               {"timestamp": "desc"}
@@ -109,7 +115,7 @@
   ]
 },
 {
-  "name": "search-after-with-pit-source-journal",
+  "name": "search-after-with-pit-source-journal-no-compression",
   "operation-type": "composite",
   "requests": [
     {
@@ -126,6 +132,8 @@
           "with-point-in-time-from": "open-pit",
           "pages": 25,
           "results-per-page": 1000,
+          "#COMMENT": "Large responses cause overhead on the client when decompressing the response. Disable to avoid the overhead",
+          "response-compression-enabled": false,
           "body": {
             "sort": [
               {"timestamp": "desc"}

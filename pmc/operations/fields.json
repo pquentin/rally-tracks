@@ -1,5 +1,5 @@
 {
-  "name": "search-after-with-pit-fields-body",
+  "name": "search-after-with-pit-fields-body-no-compression",
   "operation-type": "composite",
   "requests": [
     {
@@ -16,6 +16,8 @@
           "with-point-in-time-from": "open-pit",
           "pages": 25,
           "results-per-page": 1000,
+          "#COMMENT": "Large responses cause overhead on the client when decompressing the response. Disable to avoid the overhead",
+          "response-compression-enabled": false,
           "body": {
             "sort": [
               {"timestamp": "desc"}
@@ -37,7 +39,7 @@
   ]
 },
 {
-  "name": "search-after-with-pit-fields-journal",
+  "name": "search-after-with-pit-fields-journal-no-compression",
   "operation-type": "composite",
   "requests": [
     {
@@ -54,6 +56,8 @@
           "with-point-in-time-from": "open-pit",
           "pages": 25,
           "results-per-page": 1000,
+          "#COMMENT": "Large responses cause overhead on the client when decompressing the response. Disable to avoid the overhead",
+          "response-compression-enabled": false,
           "body": {
             "sort": [
               {"timestamp": "desc"}

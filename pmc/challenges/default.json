@@ -68,32 +68,32 @@
           }
         },
         {
-          "operation": "search-after-with-pit-default",
+          "operation": "search-after-with-pit-default-no-compression",
           "warmup-iterations": 10,
           "iterations": 20
         },
         {
-          "operation": "search-after-with-pit-source-false",
+          "operation": "search-after-with-pit-source-false-no-compression",
           "warmup-iterations": 10,
           "iterations": 20
         },
         {
-          "operation": "search-after-with-pit-fields-body",
+          "operation": "search-after-with-pit-fields-body-no-compression",
           "warmup-iterations": 10,
           "iterations": 20
         },
         {
-          "operation": "search-after-with-pit-fields-journal",
+          "operation": "search-after-with-pit-fields-journal-no-compression",
           "warmup-iterations": 10,
           "iterations": 20
         },
         {
-          "operation": "search-after-with-pit-source-body",
+          "operation": "search-after-with-pit-source-body-no-compression",
           "warmup-iterations": 10,
           "iterations": 20
         },
         {
-          "operation": "search-after-with-pit-source-journal",
+          "operation": "search-after-with-pit-source-journal-no-compression",
           "warmup-iterations": 10,
           "iterations": 20
         }
